@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px dotted wheat; */
+}
+:root{
+    --Verydarkbluemain: hsl(217, 54%, 11%);
+    --Verydarkbluecard: hsl(216, 50%, 16%);
+    --Verydarkblueline: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+    --Softblue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+}
+
+body{
+    background-color: var(--Verydarkbluemain);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 1px);
+    font-family: 'Outfit', sans-serif;
+}
+
+a{text-decoration: none;}
+.container{
+    width: 350px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    background-color:var(--Verydarkbluecard);
+    border-radius: 0.625rem;
+    box-shadow: 0px 20px 25px 15px rgba(0, 0, 0, 0.05), 0px 40px 30px 15px rgba(0, 0, 0, 0.1)
+}
+
+.images{
+    position: relative;
+    height: 100%;
+    display: flex;
+    cursor: pointer;
+
+}
+
+.equl{
+    border-radius: 0.625rem;
+    /* width: 100%;
+    height: 100%; */
+    position: relative;
+    overflow: hidden;   /*instead of using width and height we can just use overflow:hidden to prevent any overflow*/
+}
+
+.images::after{
+    content: url('./images/icon-view.svg');
+    background-color: var(--Cyan);
+    position: absolute;
+     inset: 0;  /*use inset:0; then it fill all container*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.25s ease;
+    border-radius: 0.625rem;
+}
+
+.images:hover::after{
+    opacity: 0.5;
+}
+
+/* .equl:hover{
+    z-index: 1;
+}
+
+.view{
+    position: absolute;
+    z-index: 7;
+    top: 43%;
+    left: 43%;
+}
+
+
+.cian{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--Cyan);
+    z-index: 4;
+    opacity: 50%;
+    border-radius: 0.625rem;
+} */
+
+
+
+h3{
+    color: var(--White);
+    margin-top:10px;
+    font-size: 22px;
+    font-weight: 500px;
+    transition: all 0.25s ease;
+}
+
+h3:hover{
+    color: var(--Cyan);
+}
+
+.content-first{
+    color: var(--Softblue);
+    font-size: 1.1rem;
+    font-weight: 100;
+    margin: 10px 0;
+    line-height: 1.5;
+    /* text-align: justify; */
+}
+
+/* Section1******************************************** */
+
+.section1{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--Verydarkblueline);
+    padding: 10px 0;
+}
+
+.ethereum{
+    display: flex;
+    color: var(--Cyan);
+}
+
+.ethereum img{
+    margin-right: 10px;
+}
+
+.time{
+    display: flex;
+    color: var(--Softblue);
+}
+
+.time img{
+    margin-right: 10px;
+}
+
+/* section 2******************************************** */
+.section2{
+    display: flex;
+    padding: 15px 0;
+}
+
+.section2 img{
+    width: 40px;
+    border: 1px solid var(--Softblue);
+    border-radius: 50%;
+}
+
+.section2 p{
+    color: var(--Softblue);
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+#span{
+    color: var(--White);
+}
+
+
+
+
+
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
